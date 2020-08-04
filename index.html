@@ -19,21 +19,28 @@
 
 <body>
 <div class="head">head</div>
-     <div class="header">
-                    <div class="menu">
-                        <nav>
-                            <ul>
-                            <li><a class=”current” href=”#”>Home</a></li>
-                            <li><a href=”#”>Web design</a></li>
-                            <li><a href=”#”>Banner</a></li>
-                            <li><a href=”#”>Ilusutration</a></li>
-                            <li><a href=”#”>About me</a></li>
-                            </ul>
-                        </nav>
+ <div class="header">aaa</div>
+  <div id="navArea">
 
-                    </div>
-                </div>
-
+      <nav>
+        <div class="inner">
+          <ul>
+            <li><a href="https://miharu828.github.io/portfolio">Home</a></li>
+            <li><a href="https://miharu828.github.io/aboutme">About me</a></li>
+            <li><a href="https://miharu828.github.io/contact">Contact</a></li>
+          </ul>
+        </div>
+      </nav>
+     
+      
+        <div class="toggle_btn">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      
+        <div id="mask"></div>
+      
  <div class="title">映画サイト</div>
 <div class="main">
 <video src="video/Bootstrap Theme および他 1 ページ - 個人 - Microsoft​ Edge 2020-07-31 10-23-56.mp4" loop autoplay muted></video>
@@ -90,6 +97,27 @@ https://miharu828.github.io/book/">view site</a>
 <div class="footer">
     Sakashita Miharu
 </div>
+    
+    <script>
+  (function($) {
+var $nav   = $('#navArea');
+var $btn   = $('.toggle_btn');
+var $mask  = $('#mask');
+var open   = 'open'; // class
+// menu open close
+$btn.on( 'click', function() {
+if ( ! $nav.hasClass( open ) ) {
+$nav.addClass( open );
+} else {
+$nav.removeClass( open );
+}
+});
+// mask close
+$mask.on('click', function() {
+$nav.removeClass( open );
+});
+} )(jQuery);
+</script>
 
 </body>
 
